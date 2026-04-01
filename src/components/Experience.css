@@ -1,0 +1,84 @@
+.exp-section { background: var(--bg); }
+
+.exp-timeline {
+  margin-top: 56px;
+  padding-left: 36px;
+  position: relative;
+}
+
+.exp-item { position: relative; margin-bottom: 36px; }
+
+.exp-dot {
+  position: absolute; left: -36px; top: 26px;
+  width: 14px; height: 14px;
+  display: flex; align-items: center; justify-content: center;
+}
+.exp-dot__core {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--cyan); position: relative; z-index: 2;
+}
+.exp-dot__ring {
+  position: absolute; inset: -4px; border-radius: 50%;
+  border: 1px solid var(--cyan); opacity: .4;
+  animation: pulse 2s infinite;
+}
+
+.exp-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--rl); padding: 32px;
+  transition: var(--tr); position: relative; overflow: hidden;
+}
+.exp-card::before {
+  content: ''; position: absolute;
+  left: 0; top: 0; bottom: 0; width: 3px;
+  background: linear-gradient(to bottom, var(--cyan), var(--purple));
+  border-radius: 3px 0 0 3px;
+}
+.exp-card:hover {
+  border-color: rgba(0,245,212,.2);
+  transform: translateX(5px);
+  box-shadow: 0 0 40px rgba(0,245,212,.05);
+}
+
+.exp-card__top {
+  display: flex; justify-content: space-between;
+  align-items: flex-start; gap: 16px;
+  margin-bottom: 22px; flex-wrap: wrap;
+}
+.exp-role {
+  font-family: var(--ff-head); font-size: 21px; font-weight: 700;
+  color: var(--t1); margin-bottom: 6px;
+}
+.exp-company {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 13px; color: var(--t2);
+}
+.exp-period {
+  font-family: var(--ff-mono); font-size: 11px;
+  color: var(--cyan); background: rgba(0,245,212,.07);
+  border: 1px solid rgba(0,245,212,.18);
+  padding: 5px 14px; border-radius: 99px;
+  white-space: nowrap; letter-spacing: .04em;
+}
+
+.exp-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+.exp-list__item {
+  display: flex; gap: 10px;
+  font-size: 14px; color: var(--t2); line-height: 1.65;
+}
+.exp-arrow { color: var(--cyan); font-size: 12px; flex-shrink: 0; margin-top: 3px; }
+
+.exp-tech { display: flex; flex-wrap: wrap; gap: 7px; }
+.exp-tech__tag {
+  font-family: var(--ff-mono); font-size: 11px;
+  padding: 4px 12px; border-radius: 99px;
+  background: rgba(139,92,246,.09); border: 1px solid rgba(139,92,246,.2);
+  color: #b39dfa; letter-spacing: .03em;
+}
+
+@media (max-width: 600px) {
+  .exp-timeline { padding-left: 24px; }
+  .exp-dot { left: -24px; }
+  .exp-card { padding: 22px 18px; }
+  .exp-card__top { flex-direction: column; }
+}

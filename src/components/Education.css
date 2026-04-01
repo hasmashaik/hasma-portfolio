@@ -1,0 +1,84 @@
+.edu-section { background: var(--bg); }
+
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 56px;
+  align-items: start;
+}
+
+.edu-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--rl);
+  padding: 30px;
+  transition: var(--tr);
+  animation: fadeUp .6s ease both;
+}
+.edu-box:hover {
+  border-color: rgba(0,245,212,.15);
+  box-shadow: 0 0 40px rgba(0,245,212,.04);
+}
+
+.edu-box__title {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--ff-head); font-size: 17px; font-weight: 700;
+  color: var(--t1);
+  margin-bottom: 22px; padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Education rows */
+.edu-row {
+  display: flex; justify-content: space-between;
+  align-items: center; gap: 12px;
+  padding: 14px; margin-bottom: 10px;
+  background: rgba(255,255,255,.02);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  transition: var(--tr);
+}
+.edu-row:hover { border-color: rgba(0,245,212,.2); background: rgba(0,245,212,.02); }
+.edu-degree { font-family: var(--ff-head); font-size: 13px; font-weight: 700; color: var(--t1); margin-bottom: 3px; }
+.edu-inst   { font-size: 12px; color: var(--t2); margin-bottom: 3px; }
+.edu-year   { font-family: var(--ff-mono); font-size: 11px; color: var(--t3); }
+
+.edu-cgpa   { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+.cgpa-n     { display: block; font-family: var(--ff-head); font-size: 26px; font-weight: 800; line-height: 1; }
+.cgpa-l     { font-family: var(--ff-mono); font-size: 9px; color: var(--t3); text-transform: uppercase; letter-spacing: .1em; }
+
+/* Cert rows */
+.cert-row {
+  display: flex; gap: 13px; align-items: flex-start;
+  padding: 13px; margin-bottom: 10px;
+  background: rgba(255,255,255,.02);
+  border: 1px solid var(--border);
+  border-radius: var(--r); transition: var(--tr);
+}
+.cert-row:hover { border-color: rgba(0,245,212,.2); }
+.cert-check {
+  width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0;
+  background: rgba(0,245,212,.1); border: 1px solid var(--cyan);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--cyan); font-size: 11px; font-weight: 700;
+}
+.cert-name   { font-family: var(--ff-head); font-size: 13px; font-weight: 600; color: var(--t1); margin-bottom: 3px; }
+.cert-issuer { font-family: var(--ff-mono); font-size: 11px; color: var(--t3); }
+
+/* Lang rows */
+.lang-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 13px; margin-bottom: 10px;
+  background: rgba(255,255,255,.02);
+  border: 1px solid var(--border);
+  border-radius: var(--r); transition: var(--tr);
+}
+.lang-row:hover { border-color: rgba(0,245,212,.2); }
+.lang-name  { font-family: var(--ff-head); font-size: 14px; font-weight: 600; color: var(--t1); }
+.lang-dots  { display: flex; gap: 5px; }
+.lang-dot   { width: 8px; height: 8px; border-radius: 50%; background: var(--border); transition: var(--tr); }
+.lang-dot--on { background: var(--cyan); }
+
+@media (max-width: 1024px) { .edu-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 640px)  { .edu-grid { grid-template-columns: 1fr; } }
