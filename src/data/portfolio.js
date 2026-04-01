@@ -23,7 +23,7 @@ export const experience = [
   {
     role: "Java Full Stack Developer Intern",
     company: "Career School IT Solutions",
-    location: "Chennai",
+    location: "Nellore",
     period: "Jan 2025 – Nov 2025",
     tech: ["Java", "Spring Boot", "Node.js", "React.js", "MySQL", "PostgreSQL", "Postman", "Git"],
     highlights: [
