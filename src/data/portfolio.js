@@ -91,7 +91,7 @@ export const certifications = [
 ];
 
 export const languages = [
-  { name: "English", level: 5 },
-  { name: "Telugu",  level: 5 },
-  { name: "Hindi",   level: 3 },
+  { name: "English" },
+  { name: "Telugu" },
+  { name: "Hindi"  },
 ];
